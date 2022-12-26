@@ -10,12 +10,12 @@ import javafx.scene.layout.Pane;
 import java.sql.ResultSet;
 
 public class Product extends Pane {
-    private SimpleIntegerProperty id;
+    private SimpleIntegerProperty productID;
     private SimpleStringProperty name;
     private SimpleDoubleProperty price;
 
-    public int getID() {
-        return id.get();
+    public int getProductID() {
+        return productID.get();
     }
 
     public double  getPrice() {
@@ -26,8 +26,8 @@ public class Product extends Pane {
         return name.get();
     }
 
-    public Product(int id, String name, double price){
-        this.id= new SimpleIntegerProperty(id);
+    public Product(int productID, String name, double price){
+        this.productID= new SimpleIntegerProperty(productID);
         this.name= new SimpleStringProperty(name);
         this.price= new SimpleDoubleProperty(price);
     }

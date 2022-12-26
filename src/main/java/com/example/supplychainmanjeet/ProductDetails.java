@@ -40,7 +40,7 @@ ObservableList<Product> products=  Product.getAllProducts();
 
     public Pane getProductsByName(String productName){
         TableColumn id =  new TableColumn("Id");
-        id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        id.setCellValueFactory(new PropertyValueFactory<>("productID"));
         TableColumn name =  new TableColumn("Name");
         name.setCellValueFactory(new PropertyValueFactory<>("name"));
         TableColumn price =  new TableColumn("Price");

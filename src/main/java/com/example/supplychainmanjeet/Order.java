@@ -8,7 +8,7 @@ public class Order {
     public static boolean placeOrder(String customerEmail, Product product)
     {
         DatabaseConnection databaseConnection = new DatabaseConnection();
-        String query = String.format("INSERT INTO orders (customer_id, product_id) VALUES ((SELECT customer_id FROM customerinfo WHERE email = '%s'), %s)", customerEmail, product.getID());
+        String query = String.format("INSERT INTO orders (customer_id, product_id) VALUES ((SELECT customer_id FROM customerinfo WHERE email = '%s'), %s)", customerEmail, product.getProductID());
         int rowCount = 0;
         //int rowCount=0;
         try{
